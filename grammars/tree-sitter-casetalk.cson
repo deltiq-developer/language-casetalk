@@ -1,10 +1,15 @@
 name: 'CaseTalk'
-scopeName: 'text.casetalk'
+scopeName: 'casetalk'
 type: 'tree-sitter'
 parser: 'tree-sitter-casetalk'
 
 fileTypes: [
   'exp'
+]
+
+firstLineRegex: [
+  # EXPFILE
+  '^[EXPFILE]'
 ]
 
 injectionRegExp: '(CaseTalk|casetalk|Casetalk)$'
@@ -16,12 +21,42 @@ folds: [
 ]
 
 comments:
-  start: ';'
+  start: '; '
 
 scopes:
-  'program': 'text.casetalk'
-  'header': 'entity.name.tag'
-  "fact > '\"':nth-child(0)": 'punctuation.definition.string.begin'
-  'fact > "\'":nth-child(0)': 'punctuation.definition.string.begin'
-  "fact > '\"':nth-child(2)": 'punctuation.definition.string.end'
-  'fact > "\'":nth-child(2)': 'punctuation.definition.string.end'
+  'program': 'casetalk'
+  'header': 'keyword.operator'
+  'comment': 'comment.line'
+  'fact': 'string.quoted'
+  'tag': {match: /(Tag|tag)/, scopes: 'keyword.operator'},
+
+  '"+"': 'keyword.operator'
+  '"-"': 'keyword.operator'
+  '"*"': 'keyword.operator'
+  '"/"': 'keyword.operator'
+  '"%"': 'keyword.operator'
+  '"**"': 'keyword.operator'
+  '"//"': 'keyword.operator'
+  '"=="': 'keyword.operator'
+  '"!="': 'keyword.operator'
+  '"<>"': 'keyword.operator'
+  '">"': 'keyword.operator'
+  '"<"': 'keyword.operator'
+  '">="': 'keyword.operator'
+  '"<="': 'keyword.operator'
+  '"="': 'keyword.operator'
+  '"+="': 'keyword.operator'
+  '"-="': 'keyword.operator'
+  '"*="': 'keyword.operator'
+  '"/="': 'keyword.operator'
+  '"%="': 'keyword.operator'
+  '"**="': 'keyword.operator'
+  '"//="': 'keyword.operator'
+  '"&"': 'keyword.operator'
+  '"|"': 'keyword.operator'
+  '"^"': 'keyword.operator'
+  '"~"': 'keyword.operator'
+  '"<<"': 'keyword.operator'
+  '">>"': 'keyword.operator'
+  'binary_operator > "@"': 'keyword.operator'
+  'binary_operator > "@="': 'keyword.operator'
