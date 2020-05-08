@@ -1,6 +1,6 @@
 {
   "name": "language-casetalk",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "author": "Roy Maassen <roy.maassen@deltiq.com>",
   "description": "Syntax highlighting for CaseTalk expression files.",
   "keywords": [
