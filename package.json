@@ -1,0 +1,15 @@
+{
+  "name": "language-casetalk",
+  "version": "0.0.1",
+  "author": "Roy Maassen <roy.maassen@deltiq.com>",
+  "description": "A language description for CaseTalk expression files.",
+  "keywords": [
+    "grammar",
+    "casetalk"
+  ],
+  "repository": "https://github.com/deltiq-developer/language-casetalk",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  }
+}

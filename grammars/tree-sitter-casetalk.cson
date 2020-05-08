@@ -1,0 +1,27 @@
+name: 'CaseTalk'
+scopeName: 'text.casetalk'
+type: 'tree-sitter'
+parser: 'tree-sitter-casetalk'
+
+fileTypes: [
+  'exp'
+]
+
+injectionRegExp: '(CaseTalk|casetalk|Casetalk)$'
+
+folds: [
+  {
+    type: ['comment', 'fact', 'header'],
+  }
+]
+
+comments:
+  start: ';'
+
+scopes:
+  'program': 'text.casetalk'
+  'header': 'entity.name.tag'
+  "fact > '\"':nth-child(0)": 'punctuation.definition.string.begin'
+  'fact > "\'":nth-child(0)': 'punctuation.definition.string.begin'
+  "fact > '\"':nth-child(2)": 'punctuation.definition.string.end'
+  'fact > "\'":nth-child(2)': 'punctuation.definition.string.end'
