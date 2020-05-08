@@ -11,5 +11,8 @@
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
-  }
+  },
+  "dependencies": {
+      "tree-sitter-casetalk": "0.0.3"
+  },
 }
