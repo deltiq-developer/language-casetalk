@@ -1,8 +1,9 @@
 {
   "name": "language-casetalk",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "author": "Roy Maassen <roy.maassen@deltiq.com>",
-  "description": "Syntax highlighting for CaseTalk expression files.",
+  "description": "Syntax highlighting for CaseTalk expression files. CaseTalk is a product from BCP Software. See https://casetalk.com for more information.
+  ",
   "keywords": [
     "grammar",
     "casetalk"
