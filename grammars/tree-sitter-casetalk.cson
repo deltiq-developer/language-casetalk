@@ -9,7 +9,7 @@ fileTypes: [
 
 firstLineRegex: [
   # EXPFILE
-  '^[EXPFILE]'
+  '^\[EXPFILE\]'
 ]
 
 injectionRegExp: '(CaseTalk|casetalk|Casetalk)$'
@@ -25,7 +25,7 @@ comments:
 
 scopes:
   'program': 'casetalk'
-  'header': 'keyword.operator'
-  'comment': 'comment.line'
-  'fact': 'string.quoted'
-  'tag': 'keyword.operator'
+  'header': 'entity.name.section.group-title.ini'
+  'comment': 'comment.line.semicolon.ini'
+  'fact': 'string.quoted.double.ini'
+  'tag': 'entity.name.section.group-title.ini'
